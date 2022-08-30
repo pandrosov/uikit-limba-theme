@@ -1,0 +1,23 @@
+.about_us {
+    background-image: url("../../../dist/images/backgrounds/bg-about-us-min.png");
+    background-position: center right;
+    background-repeat: no-repeat;
+    
+    @media screen and (max-width: @breakpoint-small-max) {
+        .about_us {
+            &__card { 
+                margin-bottom: @margin-large-margin!important;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        &__container {
+            height: 500px;
+            
+            &__img {
+                object-fit: cover;
+            }
+        }
+    }
+}

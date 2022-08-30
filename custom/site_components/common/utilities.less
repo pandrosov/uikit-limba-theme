@@ -1,0 +1,30 @@
+.heading-divider {
+    position: relative;
+    padding-bottom: 20px;
+
+    &:after {
+        content: "";  
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        background: @global-color;
+        width: 120px;
+    }
+}
+.checkbox-panel {
+    border-radius: 6px;
+    border: 1px solid #eeee;
+}
+//delete arrows input number
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type='number'] {
+    -moz-appearance: textfield; //firefox
+} 
+//delete arrows input number end

@@ -1,0 +1,19 @@
+.main-video {
+    background-image: url("../../../dist/images/backgrounds/bg-main-slider-min.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    &__container {
+        padding-bottom: 180px;
+    }
+}
+
+@media screen and (max-width: @breakpoint-large) {
+    .main-video {
+        background-image: none;
+    
+        &__container {
+            padding-bottom: 0;
+        }
+    }   
+}
