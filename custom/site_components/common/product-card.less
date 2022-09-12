@@ -1,0 +1,24 @@
+// component for product card
+.products__grid {
+    &__card {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 369px;
+        padding: @product-card-padding;
+        background: @product-card-background;
+        border-radius: @product-card-border-radius;
+
+        &_img {
+            border-radius: inherit;
+            background: @product-card-background-overlay;
+        }
+
+        &_info {
+            &__title {
+                letter-spacing: 3px;
+                font-size: 16px;
+            }
+        }
+    }
+}

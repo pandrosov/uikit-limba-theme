@@ -7,6 +7,13 @@
 // Variables
 // ========================================================================
 
+@button-primary-background:                     #555555;
+@button-primary-color:                          #fff;
+@button-primary-hover-background:               darken(@button-primary-background, 5%);
+@button-primary-hover-color:                    @global-inverse-color;
+@button-primary-active-background:              darken(@button-primary-background, 10%);
+@button-primary-active-color:                   @global-inverse-color;
+
 
 @button-line-height:                            @global-control-height - (@button-border-width * 2);
 @button-small-line-height:                      @global-control-small-height - (@button-border-width * 2);
@@ -60,6 +67,7 @@
     -webkit-transition-property: color, background-color, border-color;
     -o-transition-property: color, background-color, border-color;
     transition-property: color, background-color, border-color;
+    border-radius: 40px;
 }
 
 .hook-button-hover() {}

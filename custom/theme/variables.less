@@ -6,28 +6,36 @@
 
 // Global variables
 // ========================================================================
-@global-navbar-color:           #212221;
-@global-color:                  #333;
-@global-muted-color:             #212123;
-@global-border-custom:          #333333;
+@global-navbar-color:           #888888;
+@global-color:                  #555555;
+@global-muted-color:            #888888;
+@global-border-custom:          #555555;
+@global-emphasis-color:         #555555;
 
 //
 // Typography
 //
 
 @font-face {
-    font-family: 'PT-Sans';
-    src: url('../fonts/PTSans-Regular.ttf');
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf');
     font-display: swap;
 }
 
-@global-font-family:                            'PT-Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../fonts/Montserrat-Light.ttf');
+    font-display: swap;
+}
+
+@global-font-family: 'Montserrat', 'san-serif', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+@global-font-family-second: 'Montserrat-Light', 'san-serif', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
 
 
 //
 // Colors
 //
-@global-link-color:                             #212221;
+@global-link-color:                             #555555;
 @global-link-hover-color:                       rgb(99, 97, 97);
 
 
@@ -53,3 +61,6 @@
 //
 // Z-index
 //
+
+// Box Shadows
+@global-small-box-shadow:                       0 0 20px 0 rgba(0,0,0,0.12);

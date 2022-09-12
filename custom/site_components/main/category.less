@@ -1,0 +1,211 @@
+.line-preview {
+    &-left {
+        &__subtitle {
+            font-size: 32px;
+        }
+    
+        &__tabs {
+
+            & li &__item__content > img {
+                opacity: 0.2;
+                -webkit-transition: opacity .5s linear;
+                -o-transition: opacity .5s linear;
+                transition: opacity .5s linear; 
+            }
+            
+            & li.uk-active &__item__content > img {
+                opacity: 1;
+            }
+
+            &__item {
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -3px;
+                    height: 3px;
+                    width: 100%;
+                    background: #CCCCCC;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+    &-right {
+        &__bordered-image {
+            border-radius: 5px;
+            border: 1px solid @category-border-color;
+            padding: 52px;
+        }
+
+        &__button {
+            -webkit-transform: translateY(-21px);
+                -ms-transform: translateY(-21px);
+                    transform: translateY(-21px);
+        }
+    }
+
+    &-options  {
+        &__right {
+            &__items {
+                &__item {
+
+                }
+            }
+        }
+    } 
+
+    &__product {
+
+        &__background {
+            position: absolute;
+            z-index: -4;
+            top: 200px;
+            max-width: 90%;
+            -webkit-transform: rotate(180deg) scale(1, -1);
+                -ms-transform: rotate(180deg) scale(1, -1);
+                    transform: rotate(180deg) scale(1, -1);
+        }
+
+        &__right {
+            position: relative;
+            max-height: 350px;
+            min-height: 350px;
+
+            &__img {
+                background-size: contain;
+                background-image: url('../../../.././pages/assets/design-img/product-block.png');
+                background-repeat: no-repeat;
+                background-position: center center;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 230px;
+                    height: 230px;
+                    border-radius: 50%;
+                    background: #2C2A2A;
+                    z-index: -1;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 50%;
+                    background: -o-linear-gradient(right, #343434 0%, #FEFBF9 100%);
+                    background: -webkit-gradient(linear, right top, left top, from(#343434), to(#FEFBF9));
+                    background: linear-gradient(270deg, #343434 0%, #FEFBF9 100%);
+                    z-index: -2;
+                }
+            }
+
+            &__rectangle {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50%;
+                height: 100%;
+                background: #343434;
+                z-index: -3;
+            }
+        }
+    }
+
+    // products block
+    &-products {
+        position: relative;
+
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            z-index: -1;            
+        }
+        
+        &:before {
+            top: 0;
+            right: 0;
+            background: url('../../../../pages/assets/svg/background-blocks.svg') top right no-repeat;
+        }
+
+        &:after {
+            bottom: 0;
+            left: 0;
+            background: url('../../../../pages/assets/svg/background-blocks-inverse.svg') bottom left no-repeat;
+        }
+    }
+
+    // Utiliities
+    &__border {
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 25px; 
+    }
+
+    &__text {
+        &_border {
+            padding: 5px 0;
+        }
+    }
+
+
+    // media queries
+    @media screen and (min-width: 659px) {
+        &__product {
+            &__right {
+                min-height: 300px;
+                max-height: 900px;
+
+                &__img {
+                    background-size: auto;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 473px;
+                        height: 473px;
+                        border-radius: 50%;
+                        background: #2C2A2A;
+                        z-index: -1;
+                    }
+            
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 580px;
+                        height: 580px;
+                        border-radius: 50%;
+                        background: -o-linear-gradient(right, #343434 0%, #FEFBF9 100%);
+                        background: -webkit-gradient(linear, right top, left top, from(#343434), to(#FEFBF9));
+                        background: linear-gradient(270deg, #343434 0%, #FEFBF9 100%);
+                        z-index: -2;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) and (min-width: 659px) {
+        &__product {
+            &__right {
+                min-height: 550px;
+                max-height: 900px;
+            }
+        }
+    }
+
+}

@@ -38,9 +38,12 @@
  */
 
 .uk-tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     /* 1 */
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     /* 2 */
     margin-left: -@tab-margin-horizontal;
     /* 3 */
@@ -57,7 +60,9 @@
 
 .uk-tab > * {
     /* 1 */
-    flex: none;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
     /* 2 */
     padding-left: @tab-margin-horizontal;
     /* 3 */
@@ -78,12 +83,20 @@
 
 .uk-tab > * > a {
     /* 1 */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     /* 2 */
-    column-gap: 0.25em;
+    -webkit-column-gap: 0.25em;
+       -moz-column-gap: 0.25em;
+            column-gap: 0.25em;
     /* 3 */
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     /* 4 */
     padding: @tab-item-padding-vertical @tab-item-padding-horizontal;
     color: @tab-item-color;
@@ -93,7 +106,8 @@
 /* Hover */
 .uk-tab > * > a:hover {
     color: @tab-item-hover-color;
-    text-decoration: @tab-item-hover-text-decoration;
+    -webkit-text-decoration: @tab-item-hover-text-decoration;
+            text-decoration: @tab-item-hover-text-decoration;
     .hook-tab-item-hover();
 }
 
@@ -132,7 +146,10 @@
 
 .uk-tab-left,
 .uk-tab-right {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     /* 1 */
     margin-left: 0;
 }
@@ -150,12 +167,16 @@
 }
 
 .uk-tab-left > * > a {
-    justify-content: left;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     .hook-tab-left-item();
 }
 
 .uk-tab-right > * > a {
-    justify-content: left;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     .hook-tab-right-item();
 }
 

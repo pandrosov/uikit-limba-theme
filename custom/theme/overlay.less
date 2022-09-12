@@ -9,6 +9,23 @@
 @overlay-default-background:                            @global-overlay-default-background;
 //@overlay-primary-background:                            
 @overlay-secondary-background:                        rgba(0,0,0,.7);
+@overlay-opacity-video:                                 0.7;
+
+// custom selectors
+.uk-overlay-video {
+    opacity: @overlay-opacity-video;
+    -webkit-transition: opacity 0.4s ease-in;
+    -o-transition: opacity 0.4s ease-in;
+    transition: opacity 0.4s ease-in;
+    cursor: pointer;
+    z-index: 2;
+
+    &:hover {
+        opacity: .3;
+    }
+}
+
+
 
 // Component
 // ========================================================================

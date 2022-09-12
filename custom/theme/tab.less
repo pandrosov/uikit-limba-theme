@@ -11,31 +11,26 @@
 // New
 //
 
-@tab-border-width:                              @global-border-width;
+@tab-border-width:                              3px;
 @tab-border:                                    @global-border;
-
-@tab-item-border-width:                         @global-border-width;
+@tab-item-border-width:                         3px;
 @tab-item-font-size:                            @global-small-font-size;
-@tab-item-text-transform:                       uppercase;
-
-@tab-item-active-border:                        @global-primary-background;
+@tab-item-text-transform:                       none;
+@tab-item-active-border:                        #212323;
+@tab-item-active-color:                         @global-emphasis-color;
 
 
 // Component
 // ========================================================================
+.uk-tab > *:first-child {
+    padding-left: @tab-margin-horizontal;
+}
+
+.uk-tab > * {
+    padding-left: 0;
+}
 
 .hook-tab() {
-
-    position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: @tab-margin-horizontal;
-        right: 0;
-        border-bottom: @tab-border-width solid @tab-border;
-    }
 
 }
 
@@ -47,7 +42,9 @@
     border-bottom: @tab-item-border-width solid transparent;
     font-size: @tab-item-font-size;
     text-transform: @tab-item-text-transform;
-    transition: color 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 .hook-tab-item-hover() {}
