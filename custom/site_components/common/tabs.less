@@ -1,0 +1,31 @@
+// variables
+@tabs-border-width: 3px;
+@tabs-border-color: #CCCCCC;
+@tabs-border-color-active: #212323;
+@tabs-border-width-active: 3px;
+
+// selectors
+.tabs-item {
+    opacity: .4;
+    -webkit-transition: opacity .4s linear;
+    -o-transition: opacity .4s linear;
+    transition: opacity .4s linear;
+
+
+    &.active, &:hover {
+        opacity: 1;
+
+    
+        & .tabs-item__title {
+            border-bottom: @tabs-border-width-active solid @tabs-border-color-active;
+            -webkit-transition: border .4s linear;
+            -o-transition: border .4s linear;
+            transition: border .4s linear;
+        }
+    }
+}
+
+.tabs-item__title {
+    padding-bottom: 10px;
+    border-bottom: @tabs-border-width solid @tabs-border-color;
+}

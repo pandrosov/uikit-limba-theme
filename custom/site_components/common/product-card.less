@@ -1,3 +1,9 @@
+// product card variables
+@product-card-border-radius: 40px;
+@product-card-background: #fff;
+@product-card-background-overlay: #F4F4F4;
+@product-card-padding: 25px;
+
 // component for product card
 .products__grid {
     &__card {
@@ -10,7 +16,7 @@
         border-radius: @product-card-border-radius;
 
         &_img {
-            border-radius: inherit;
+            border-radius: @product-card-border-radius;
             background: @product-card-background-overlay;
         }
 

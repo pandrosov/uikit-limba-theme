@@ -1,3 +1,14 @@
+// Utiliities
+.block--bordered {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 25px; 
+}
+
+.text-background {
+    padding: 5px 0;
+}
+
 .heading-divider {
     position: relative;
     padding-bottom: 20px;
@@ -7,7 +18,9 @@
         position: absolute;
         bottom: 0;
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
         height: 1px;
         background: @global-color;
         width: 120px;

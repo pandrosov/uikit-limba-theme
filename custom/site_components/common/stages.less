@@ -1,0 +1,99 @@
+// variables
+@stages-circle: 61px;
+@stages-circle-border-radius: 50%;
+@stages-circle-color: #D2D2D2;
+@stages-line-width: 1px; 
+@stages-line-color: #CED4DA;
+@stages-right-img-border-width: 1px;
+@stages-right-img-border-color: #555555;
+
+// selectors
+.line-preview-stages__stage-title {
+    padding-top: 5px;
+    padding-left: 33px;
+}
+
+.line-preview-stages-description-list__items {
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: @stages-circle;
+        height: @stages-circle;
+        border-radius: @stages-circle-border-radius;
+        background: @stages-circle-color;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 30px; 
+        top: 30px;
+        height: 100%;
+        width: @stages-line-width;
+        background: @stages-line-color;
+    }
+
+    &__wrapper {
+        padding-left: 40px;
+    }
+}
+
+.line-preview-stages-description-item {
+    position: relative;
+
+    &:nth-child(n) {
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: calc(5% + 20px);
+            width: 15%;
+            height: 2px;
+            background: #000000;
+        }
+    }
+
+    &:last-child {
+        &:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+    }
+}
+
+.line-preview-stages-description-item__image {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        height: 80%;
+        width: @stages-right-img-border-width; 
+        background: @stages-right-img-border-color;
+    }
+}
+
+
+// media queries 
+@media screen and (max-width: 959px) {
+    .line-preview-stages-description-item {
+        position: relative;
+    
+        &:nth-child(n) {
+            &:after {
+                content: '';
+                bottom: -40px;
+                left: calc(10% + 20px);
+                width: 80%;
+            }
+        }
+    }
+}

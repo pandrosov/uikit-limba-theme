@@ -1,3 +1,102 @@
+// common styles 
+.block-background {
+    position: absolute;
+    z-index: -1;
+    max-width: 70%; 
+    height: auto;
+
+    &--top {
+        top: 0;
+    }
+
+    &--bottom {
+        bottom: 0;
+    }
+
+    &--left {
+        left: 0;
+    }
+
+    &--right {
+        right: 0;
+    }
+    // add condition
+    &--top-right {
+        top: 0;
+        right: 0;
+    }
+
+    &--bottom-right {
+        bottom: 0;
+        right: 0;
+    }
+
+    &--top-left {
+        left: 0;
+        top: 0;
+    }
+
+    &--bottom-left {
+        left: 0;
+        bottom: 0;
+    }
+
+    &--mirrored {
+        -webkit-transform: scale(1, -1);
+            -ms-transform: scale(1, -1);
+                transform: scale(1, -1);
+
+        &-rotate-45 {
+            -webkit-transform: scale(1, -1) rotate(45deg);
+                -ms-transform: scale(1, -1) rotate(45deg);
+                    transform: scale(1, -1) rotate(45deg);
+        }
+
+        &-rotate-90 {
+            -webkit-transform: scale(1, -1) rotate(90deg);
+                -ms-transform: scale(1, -1) rotate(90deg);
+                    transform: scale(1, -1) rotate(90deg);
+        }
+        
+        &-rotate-180 {
+            -webkit-transform: scale(1, -1) rotate(180deg);
+                -ms-transform: scale(1, -1) rotate(180deg);
+                    transform: scale(1, -1) rotate(180deg);
+        }
+        
+        &-rotate-270 {
+            -webkit-transform: rotate(270deg);
+                -ms-transform: rotate(270deg);
+                    transform: rotate(270deg);
+        }
+    }
+
+    &-rotate-45 {
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+
+    &-rotate-90 {
+        -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    
+    &-rotate-180 {
+        -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+    
+    &-rotate-270 {
+        -webkit-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+                transform: rotate(270deg);
+    }
+}
+
+// category straight and strong
 .line-preview {
     &-left {
         &__subtitle {
@@ -76,7 +175,7 @@
 
             &__img {
                 background-size: contain;
-                background-image: url('../../../.././pages/assets/design-img/product-block.png');
+                background-image: url('../../../dist/images/design-img/product-block.png');
                 background-repeat: no-repeat;
                 background-position: center center;
                 display: -webkit-box;
@@ -139,26 +238,13 @@
         &:before {
             top: 0;
             right: 0;
-            background: url('../../../../pages/assets/svg/background-blocks.svg') top right no-repeat;
+            background: url('../../../dist/images/svg/background-blocks.svg') top right no-repeat;
         }
 
         &:after {
             bottom: 0;
             left: 0;
-            background: url('../../../../pages/assets/svg/background-blocks-inverse.svg') bottom left no-repeat;
-        }
-    }
-
-    // Utiliities
-    &__border {
-        border: 1px solid #000;
-        border-radius: 5px;
-        padding: 25px; 
-    }
-
-    &__text {
-        &_border {
-            padding: 5px 0;
+            background: url('../../../dist/images/svg/background-blocks-inverse.svg') bottom left no-repeat;
         }
     }
 
@@ -208,4 +294,20 @@
         }
     }
 
+}
+
+// moleculare template selectors
+.line-preview-moleculare {
+    & img.block-background:first-child {
+        max-width: 90%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+
+    & img.block-background:nth-child(2) {
+        max-width: 90%;
+        bottom: -29%;
+    }
 }

@@ -498,7 +498,7 @@ a.uk-link-reset,
    Component: Heading
  ========================================================================== */
 .uk-heading-small {
-  font-size: 2.6rem;
+  font-size: 2.5328rem;
   line-height: 1.2;
 }
 .uk-heading-medium {
@@ -520,7 +520,7 @@ a.uk-link-reset,
 /* Tablet Landscape and bigger */
 @media (min-width: 960px) {
   .uk-heading-small {
-    font-size: 3.25rem;
+    font-size: 3.166rem;
   }
   .uk-heading-medium {
     font-size: 3.5rem;

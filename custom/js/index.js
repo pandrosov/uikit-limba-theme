@@ -1,4 +1,5 @@
 // category page
+// videos
 let videosOverlays = document.querySelectorAll('.uk-overlay-video');
 let videos = document.querySelectorAll('video.uk-video');
 
@@ -24,5 +25,24 @@ if(videos) {
 
             item.removeAttribute('controls');
         })
+    })
+}
+
+// tabs
+let tabsItems = document.querySelectorAll('.tabs-item');
+
+if(tabsItems) {
+    tabsItems.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+            resetActiveClass(tabsItems, 'active')
+
+            tab.classList.add('active')
+        })
+    })
+}
+
+function resetActiveClass(items, activeSelector) {
+    items.forEach(item => {
+        item.classList.remove(activeSelector);
     })
 }
