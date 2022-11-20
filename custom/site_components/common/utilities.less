@@ -5,6 +5,11 @@
     padding: 25px; 
 }
 
+.block--bordered-40 {
+    border: 1px solid @global-custom-border-color;
+    border-radius: 40px;   
+}
+
 .text-background {
     padding: 5px 0;
 }
@@ -41,3 +46,27 @@ input[type='number'] {
     -moz-appearance: textfield; //firefox
 } 
 //delete arrows input number end
+
+// circles
+.circle__text--small {
+    font-size: 14px;
+}
+
+.circle {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid @global-custom-border-color;
+    width: 107px;
+    height: 107px;
+    border-radius: 50%;
+    padding: 5px;
+}

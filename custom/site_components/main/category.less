@@ -1,3 +1,6 @@
+// variables
+
+
 // common styles 
 .block-background {
     position: absolute;
@@ -310,4 +313,97 @@
         max-width: 90%;
         bottom: -29%;
     }
+}
+
+
+// activator category
+.activator-maska-descr-info__item {
+    position: relative;
+
+    &:nth-child(n) {
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+            height: 50%;
+            width: 2px;
+            background: #D9D9D9;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
+            width: 70%;
+            height: 2px;
+            background: #D9D9D9;
+        }
+    }
+}
+
+
+// home care
+.home-care {
+    background: url('../../../dist/images/design-img/main/main-video-left.svg') left center no-repeat;
+}
+
+.home-care-about {
+    background: url('../../../dist/images/design-img/main/main-video-right.svg') right center no-repeat;
+
+    & .slide__overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(38, 38, 38, 0.85);
+        -webkit-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+                transform: translateY(100%);
+        -webkit-transition: -webkit-transform .4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        transition: -webkit-transform .4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        -o-transition: transform .4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        transition: transform .4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        transition: transform .4s cubic-bezier(0.55, 0.085, 0.68, 0.53), -webkit-transform .4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    }
+
+    & li.slider-active:hover {
+        .slide__overlay {
+            -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                    transform: translateY(0);
+        }
+    }
+
+    .slide__overlay__component {
+        font-size: 14px;
+    }
+}
+
+.home-care-about li .home-care-about-slide {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    overflow: hidden;
+    -webkit-transform: scale(.8);
+        -ms-transform: scale(.8);
+            transform: scale(.8);
+    -webkit-transition: -webkit-transform .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transition: -webkit-transform .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+    -o-transition: transform .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transition: transform .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transition: transform .4s cubic-bezier(0.215, 0.610, 0.355, 1), -webkit-transform .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.home-care-about li.slider-active .home-care-about-slide {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
 }
